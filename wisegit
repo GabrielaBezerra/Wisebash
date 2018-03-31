@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo;
+
+wiseclear;
+
+git status;
+
+git log -5 --graph --oneline;

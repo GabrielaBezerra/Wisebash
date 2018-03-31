@@ -1,0 +1,8 @@
+#!/bin/bash
+
+clear;
+date;
+echo;
+fortune;
+echo;
+
