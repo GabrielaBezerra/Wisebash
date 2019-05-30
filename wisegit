@@ -9,5 +9,11 @@ git cherry -v;
 echo "";  
 echo -e "\033[1;1m> Commits on Master today: $count \033[m";
 echo "";  
-git log -5 --graph --pretty;
+if [ $1 == ""] ; then
+	git log -3 --graph --pretty;		
+else
+	git log -$1 --graph --pretty;
+fi
+
 echo "";  
+exit;
