@@ -3,17 +3,40 @@
 wiseclear;
 
 count=$(git rev-list origin/master --count --since='$(date +%Y-%m-%d) 00:00')
+
 git status;
+
 echo "";  
+
 git cherry -v;
+
 echo "";  
+
 echo -e "\033[1;1m> Commits on Master today: $count \033[m";
-echo "";  
-if [ $1 == ""] ; then
+
+echo "";
+
+  
+
+while getopts al: OPT; do
+	case "${OPT}" in
+	a) A=1 ;;
+	l) L="${OPTARG}" ;;
+	esac
+done
+
+if [ "${A}" != "" ] ; then
+	echo "Latest commits from all branches:";
+	git fetch; 
+	git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))' | head -5; echo "";
+fi 
+
+if [ "${L}" = "" ] ; then
 	git log -3 --graph --pretty;		
 else
-	git log -$1 --graph --pretty;
+	git log -${L} --graph --pretty;
 fi
 
 echo "";  
+
 exit;
