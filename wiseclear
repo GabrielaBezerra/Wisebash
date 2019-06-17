@@ -3,6 +3,6 @@
 clear;
 date;
 echo;
-fortune;
+fortune | cowsay;
 echo;
 
