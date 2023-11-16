@@ -2,7 +2,7 @@
 
 wiseclear;
 
-count=$(git rev-list origin/master --count --since='$(date +%Y-%m-%d) 00:00')
+count=$(git rev-list origin/main --count --since='$(date +%Y-%m-%d) 00:00')
 
 git status;
 
@@ -12,7 +12,7 @@ git cherry -v;
 
 echo "";  
 
-echo -e "\033[1;1m> Commits on Master today: $count \033[m";
+echo -e "\033[1;1m> Commits on Main today: $count \033[m";
 
 echo "";
 
