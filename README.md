@@ -9,12 +9,12 @@ Some bash scripts for making one developer's life a little bit wiser through for
 Install the following dependencies:
 
 ```
-cowsay
 fortune
+cowsay
 lolcat
 ```
 
-### Installing commands
+### Install scripts
 
 After installing dependencies, do the following sequence of commands to install the scripts from this repo.
 
@@ -31,4 +31,4 @@ chmod +x wiseclear
 cp wisegit wiseclear /usr/local/bin
 ```
 
-That's it! Next time you open your terminal, you can use the scripts.
+That's it! Next time you open terminal, you can use the scripts by calling `wiseclear` anywhere, and `wisegit` inside a folder that contains a git repository.
