@@ -8,10 +8,14 @@ Some bash scripts for making one developer's life a little bit wiser through for
 
 Install the following dependencies:
 
+#### Linux:
 ```
-fortune
-cowsay
-lolcat
+apt-get install fortune cowsay lolcat
+```
+
+#### Mac:
+```
+brew install fortune cowsay lolcat
 ```
 
 ### Install scripts
